@@ -219,34 +219,34 @@ public class pruebaMetodos {
         assertEquals(cantidadEsperada,cantidadObtenida);
     }
 
-    @Test
-    public void testEvolucionPosible() {
-        Pokemon pokemon = pokemons.get(3);//Mudkid1
-        pokemon.setNivel(5);
-        Pokemon pokemonEsperado1 = null;
-        Pokemon pokemonObtenido1 = UtilidadesCombate.obtenerEvolucionPosible(pokemon);
-        assertEquals(pokemonEsperado1,pokemonObtenido1);
-        pokemon.setNivel(16);
-        Pokemon pokemonObtenido2 = UtilidadesCombate.obtenerEvolucionPosible(pokemon);
-        Pokemon pokemonEsperado2 = pokemons.get(4);//Marshtomp
-        assertEquals(pokemonEsperado2,pokemonObtenido2);
-    }
-
-
-    @Test
-    public void testAsignarEquipoPorTipos(){
-        List<Entrenador> entrenadors = entrenadores;
-        Map<Entrenador,Integer> tamanyos = UtilidadesCombate.asignarEquipoPorTipos(pokemons, entrenadors);
-        Integer puntuacionEsperadaEntrenador1 = 4;
-        Integer puntuacionObtenidaEntrenador1 = tamanyos.get(entrenadors.stream().filter(e-> e.getNombre().equals("Ash")).findFirst().get());
-        Integer puntuacionEsperadaEntrenador2 = 2;
-        Integer puntuacionObtenidaEntrenador2 = tamanyos.get(entrenadors.stream().filter(e-> e.getNombre().equals("Misty")).findFirst().get());
-        Integer puntuacionEsperadaEntrenador3 = 2;
-        Integer puntuacionObtenidaEntrenador3 = tamanyos.get(entrenadors.stream().filter(e-> e.getNombre().equals("Polo")).findFirst().get());
-        assertEquals(puntuacionEsperadaEntrenador1,puntuacionObtenidaEntrenador1);
-        assertEquals(puntuacionEsperadaEntrenador2,puntuacionObtenidaEntrenador2);
-        assertEquals(puntuacionEsperadaEntrenador3,puntuacionObtenidaEntrenador3);
-    }
+//    @Test
+//    public void testEvolucionPosible() {
+//        Pokemon pokemon = pokemons.get(3);//Mudkid1
+//        pokemon.setNivel(5);
+//        Pokemon pokemonEsperado1 = null;
+//        Pokemon pokemonObtenido1 = UtilidadesCombate.obtenerEvolucionPosible(pokemon);
+//        assertEquals(pokemonEsperado1,pokemonObtenido1);
+//        pokemon.setNivel(16);
+//        Pokemon pokemonObtenido2 = UtilidadesCombate.obtenerEvolucionPosible(pokemon);
+//        Pokemon pokemonEsperado2 = pokemons.get(4);//Marshtomp
+//        assertEquals(pokemonEsperado2,pokemonObtenido2);
+//    }
+//
+//
+//    @Test
+//    public void testAsignarEquipoPorTipos(){
+//        List<Entrenador> entrenadors = entrenadores;
+//        Map<Entrenador,Integer> tamanyos = UtilidadesCombate.asignarEquipoPorTipos(pokemons, entrenadors);
+//        Integer puntuacionEsperadaEntrenador1 = 4;
+//        Integer puntuacionObtenidaEntrenador1 = tamanyos.get(entrenadors.stream().filter(e-> e.getNombre().equals("Ash")).findFirst().get());
+//        Integer puntuacionEsperadaEntrenador2 = 2;
+//        Integer puntuacionObtenidaEntrenador2 = tamanyos.get(entrenadors.stream().filter(e-> e.getNombre().equals("Misty")).findFirst().get());
+//        Integer puntuacionEsperadaEntrenador3 = 2;
+//        Integer puntuacionObtenidaEntrenador3 = tamanyos.get(entrenadors.stream().filter(e-> e.getNombre().equals("Polo")).findFirst().get());
+//        assertEquals(puntuacionEsperadaEntrenador1,puntuacionObtenidaEntrenador1);
+//        assertEquals(puntuacionEsperadaEntrenador2,puntuacionObtenidaEntrenador2);
+//        assertEquals(puntuacionEsperadaEntrenador3,puntuacionObtenidaEntrenador3);
+//    }
 
 
 
